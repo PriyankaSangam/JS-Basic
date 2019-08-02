@@ -81,3 +81,72 @@ function FizzBuzz(input){
 return input;
   
 }
+
+checkSpeed(70);
+function checkSpeed(speed){
+  const speedlimit = 70;
+  const kmPerPoints = 5;
+  if (speed <= speedlimit){
+    console.log("OK");
+    return;
+  }
+  const points = Math.floor((speed - speedlimit) / kmPerPoints);
+  if (points > 12) {
+    console.log("Suspended");
+  }
+  else {
+      console.log('points', points);
+  }
+}
+
+showNumbers(5);
+function showNumbers(limit){
+  for (let i=0; i<=limit; i++){
+    if (i%2 === 0) console.log(i, "Even");
+    else console.log(i,'Odd')
+  }
+}
+
+showStars(3);
+function showStars(rows) {
+  for (let i = 1; i <= rows; i++) {
+    let pattern = '';
+    for (let j = 0; j < i; j++)
+      pattern += '*';
+    console.log(pattern);
+  }
+}
+
+showPrimes(10);
+function showPrimes(limit){
+  for (let number = 2; number <= limit; number++){
+    let isPrime = true; 
+    for (let factor = 2; factor < number; factor++){
+      if (number % factor === 0){
+        isPrime = false;
+        break;
+      }
+    } 
+
+    if (isPrime) console.log(number);   
+  }
+}
+       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
